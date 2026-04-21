@@ -6,8 +6,6 @@ Sensitive data such as credentials and user information have been removed or ano
 Unauthorized use, copying, or distribution of this code is strictly prohibited.
 
 
-#Description 
-
 # NGO Management Platform
 
 A full-stack web application designed to manage and streamline operations for a social impact organization. The platform enables user interaction, data management, and dynamic content delivery through an intuitive web interface.
