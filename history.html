@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History - Vibhinna India Foundation</title>
+    <link rel="stylesheet" href="static/styles.css"> <!-- Link to your existing styles -->
+    <style>
+        /* Adding custom style to make sure text doesn't overlap with the fixed header */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* To avoid the content from overlapping with the fixed header */
+        main {
+            padding-top: 180px; /* This padding should be enough to push the content down below the header */
+        }
+
+        /* Custom styles for 'Our History' section */
+        .history-section {
+            padding: 60px 20px;
+            background-color: black;
+            color: white;
+            text-align: left; /* Align text to the left for readability */
+            max-width: 900px; /* Limit width for better text alignment */
+            margin: 0 auto; /* Center the section */
+        }
+
+        /* Centering the titles (Our History & Our Vision) */
+        .history-section h1,
+        .history-section h2 {
+            text-align: center; /* Center align the title */
+            margin-bottom: 20px; /* Ensure consistent spacing after each title */
+            font-weight: bold;
+        }
+
+        /* Styling for h1 (Our History) */
+        .history-section h1 {
+            font-size: 1.8rem; /* Reduced font size for h1 */
+            margin-top: 40px;
+        }
+
+        /* Styling for h2 (Our Vision) */
+        .history-section h2 {
+            font-size: 1.6rem; /* Reduced font size for h2 */
+        }
+
+        .history-section h3 {
+            font-size: 1.4rem; /* Reduced font size for h3 */
+        }
+
+        .history-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-align: justify; /* Justify text for a clean look */
+        }
+
+        .history-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .history-section ul li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Indentation after each title */
+        .history-section h1::after,
+        .history-section h2::after,
+        .history-section h3::after {
+            content: "";
+            display: block;
+            margin: 10px auto; /* Create consistent space after title */
+            width: 80%; /* Indentation effect */
+            height: 1px; /* Reduced thickness of the line */
+            background-color: #fff; /* White underline after title */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar section-content" id="home">
+            <a href="#" class="nav-logo">
+                <img src="static/img/Logo.jpg" alt="SJU Logo" class="nav-H-logo">
+                <div class="nav-logo-text">
+                    <h2 class="H-logo-text">Vibhinna</h2>
+                    <p class="H-Logo-Description">INDIA FOUNDATION</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About US</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/campaigns" class="nav-link">Our Campaigns</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/chatbot" class="nav-link">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link">Login</a>
+                </li>
+                  <li class="nav-item">
+                    <a href="/donate" class="nav-link">Donate</a>
+                 </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <!-- Main Content for 'Our History' -->
+    <main>
+        <section class="history-section">
+            <h1>Our History</h1>
+            <p>Vibhinna India Foundation was founded in 2010 with a vision to uplift marginalized communities across India by focusing on sustainable development, education, healthcare, and social empowerment. Our foundation was born out of a deep commitment to creating lasting social change and addressing the most pressing challenges faced by vulnerable populations. Over the years, we have expanded our impact across multiple regions in India, focusing on key areas such as healthcare, education, environmental conservation, and women's empowerment. Our programs have directly impacted thousands of lives, from children to adults, and we are continuously working towards making a positive change in society. Since its inception, the Vibhinna India Foundation has directly impacted over 1 million lives across India. The foundation's programs in education, healthcare, women’s empowerment, and environmental sustainability have improved the quality of life for many, creating long-term social and economic change.</p>
+
+            <h2>Our Vision</h2>
+            <p>We aim to continue our mission of creating a better, more equitable future for all, especially focusing on vulnerable communities. Through collaboration, innovation, and dedication, we are confident that we can help bring about lasting change. The future of Vibhinna India Foundation is dedicated to continuing its mission of transforming communities by addressing challenges such as climate change, improving access to quality education, empowering women and youth, and promoting sustainable livelihoods. Through innovation, collaboration, and a commitment to social good, Vibhinna India Foundation envisions a more equitable and sustainable India for generations to come.</p>
+        </section>
+    </main>
+
+</body>
+</html>

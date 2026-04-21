@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Antony's Trust</title>
+
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+
+</head>
+
+<body>
+    
+    <header>
+        <nav class="navbar section-content" id="home">
+            <a href="#" class="nav-logo">
+                <img src="{{ url_for('static', filename='img/Logo.jpg') }}" alt="SJU Logo" class="nav-H-logo">
+                <div class="nav-logo-text">
+                    <h2 class="H-logo-text">Vibhinna</h2>
+                    <p class="H-Logo-Description">INDIA FOUNDATION</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About US</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/campaigns" class="nav-link">Our Campaigns</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/chatbot" class="nav-link">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link">Login</a>
+                </li>
+                  <li class="nav-item">
+                    <a href="/donate" class="nav-link">Donate</a>
+                 </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <br><br><br><br>
+        <section class="banner-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <h2 class="title">Change made possible</h2>
+                    <p class="banner-text">When faced with something bigger than ourselves-like poverty-it's natural to
+                        feel overwhelmed. And yet, as every single life impacted by the Christian Missions Charitable
+                        Trust shows, change is possible.</p>
+                    <a href="/signup">
+                        <button class="be-the-change">Be The Change</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seek-to-serve">
+            <div class="section-content">
+                <div class="services-comment">
+                    <h2 class="comment">We are actively involved in realizing the millennium development goals. We seek to
+                        serve the most vulnerable sections of society through…</h2>
+                </div>
+                <div class="services-bar">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="content purple">Eradication of extreme poverty and hunger</div>
+                        </div>
+                        <div class="card">
+                            <div class="content yellow">Access to education for all</div>
+                        </div>
+                        <div class="card">
+                            <div class="content red">Empowerment of women</div>
+                        </div>
+                        <div class="card">
+                            <div class="content blue">Access to affordable healthcare</div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="how-we-do-it">
+            <div class="section-content">
+
+            </div>
+
+        </section>
+
+        <section class="impact-section">
+            <div class="impact-section-content">
+                <h2>Impact of Vibhinna India Foundation</h2>
+            
+                <div class="impact-stats">
+                  <div class="stat">
+                    <h3>1850+</h3>
+                    <p>Children Supported</p>
+                  </div>
+                  <div class="stat">
+                    <h3>100+</h3>
+                    <p>Women's livelihood</p>
+                  </div>
+                  <div class="stat">
+                    <h3>29+</h3>
+                    <p>Insect cafe set up</p>
+                  </div>
+                  <div class="stat">
+                    <h3>135+</h3>
+                    <p>Native species conserved</p>
+                  </div>
+                  <div class="stat">
+                    <h3>500+</h3>
+                    <p>Women screened for Breast Cancer screening</p>
+                  </div>
+                  <div class="stat">
+                    <h3>10500+</h3>
+                    <p>Native saplings planted</p>
+                  </div>
+                  <div class="stat">
+                    <h3>15+</h3>
+                    <p>Govt. Schools renovated</p>
+                  </div>
+                  <div class="stat">
+                    <h3>18+ Cr Lts</h3>
+                    <p>Conservation of Water</p>
+                  </div>
+                </div>
+              </div>
+        </section>
+    
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>REACH US</h3>
+                <p><strong>Vibhinna India Foundation</strong></p>
+                <p>H.D' Souza Compound, Don Bosco Hall-Falnir Cross Road, Mangalore, India.</p>
+                <p>9036224124/8310312778</p>
+                <p>Email: <a href="mailto:info@cmctindia.in">info@cmctindia.in</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Know us better</h3>
+                <ul>
+                    <li><a href="/history">Our history</a></li>
+                  
+                    <li><a href="/gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="/contact">Contact us</a></li>
+                    <li><a href="https://maps.app.goo.gl/7yYimeLc7Ey5ByHG8" target="_blank">Location</a></li>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.7560124048566!2d74.84662294006071!3d12.870611617178405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4bd9d414db%3A0xebe50708a46f3b1a!2sDon%20Bosco%20Hall!5e0!3m2!1sen!2sin!4v1744220131128!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get involved</h3>
+                <ul>
+<li><a href="/signup">Sign Up</a></li>
+                    <li><a href="/donate">Donate</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="copy-rights">
+            <p class="text">
+                &copy All rights reserved to Vibhinna and team
+            </p>
+        </div>
+    </footer>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | St. Antony's Trust</title>
+
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Linking to External CSS file -->
+    <link rel="stylesheet" href="static/donatestyles.css">
+
+    <style>
+        /* Ensuring no vertical scrolling */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Make sure content fits in the available space */
+        .main-content {
+            height: calc(100vh - 60px); /* Adjusting to account for header height */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align content at the top */
+            text-align: center;
+        }
+
+        /* Reduced distance between header and QR code section */
+        .donate-section {
+            color: #fff;
+            padding: 200px 0; /* Subtle padding change to move content slightly up */
+            width: 100%;
+        }
+
+        .donate-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            max-width: 1200px; /* Maximum width of the content */
+        }
+
+        .qr-code {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .qr-code img {
+            max-width: 50%; /* Reduced image size */
+            height: auto;
+        }
+
+        .thank-you-message {
+            flex: 1;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .thank-you-message h2 {
+            margin-bottom: 20px;
+        }
+.banner-section .title {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-bold);
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar section-content" id="home">
+            <a href="#" class="nav-logo">
+                <img src="static/img/Logo.jpg" alt="SJU Logo" class="nav-H-logo">
+                <div class="nav-logo-text">
+                    <h2 class="H-logo-text">Vibhinna</h2>
+                    <p class="H-Logo-Description">INDIA FOUNDATION</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About US</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/campaigns" class="nav-link">Our Campaigns</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/chatbot" class="nav-link">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link">Login</a>
+                </li>
+                  <li class="nav-item">
+                    <a href="/donate" class="nav-link">Donate</a>
+                 </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="banner-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <!-- New Donate Section with QR Code and Thank You Message -->
+                    <div class="donate-section">
+                        <div class="donate-content">
+                            <!-- QR Code on the Left -->
+                            <div class="qr-code">
+                                <img src="static/img/QRCode.png" alt="Donate QR Code">
+                            </div>
+
+                            <!-- Thank You Message on the Right -->
+                            <div class="thank-you-message">
+                                <h2>Thank You for Your Support!</h2>
+                                <p>Your generous donation will help us continue our mission and make a real difference in people's lives. We appreciate your kindness and commitment to making a positive change.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibhinna</title>
+    <link rel="stylesheet" href="static/gallerystyles.css"> <!-- Link to your existing styles.css file -->
+    <style>
+        /* Simple CSS to style the gallery */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding-top: 20px; /* Add padding to push images below the header */
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox style */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+            margin: 0 auto;
+        }
+
+        .back-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar" id="home">
+            <a href="/" class="nav-logo">
+                <img src="static/img/Logo.jpg" alt="Vibhinna Logo" class="nav-H-logo">
+                <div class="nav-logo-text">
+                    <h2>Vibhinna</h2>
+                    <p>INDIA FOUNDATION</p>
+                </div>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <!-- Gallery Images -->
+            
+            <div class="gallery-item">
+                <img src="static/img/5.jpg" alt="Gallery Image 1" onclick="openLightbox('static/img/5.jpg')">
+            </div>
+            <div class="gallery-item">
+                <img src="static/img/6.jpg" alt="Gallery Image 2" onclick="openLightbox('static/img/6.jpg')">
+            </div>
+            <div class="gallery-item">
+                <img src="static/img/7.jpg" alt="Gallery Image 3" onclick="openLightbox('static/img/7.jpg')">
+            </div>
+            <div class="gallery-item">
+                <img src="static/img/8.jpg" alt="Gallery Image 4" onclick="openLightbox('static/img/8.jpg')">
+            </div>
+            <div class="gallery-item">
+                <img src="static/img/9.jpg" alt="Gallery Image 5" onclick="openLightbox('static/img/9.jpg')">
+            </div>
+            <div class="gallery-item">
+                <img src="static/img/10.jpg" alt="Gallery Image 6" onclick="openLightbox('static/img/10.jpg')">
+            </div>
+           <div class="gallery-item">
+                <img src="static/img/11.jpg" alt="Gallery Image 7" onclick="openLightbox('static/img/11.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/12.jpg" alt="Gallery Image 8" onclick="openLightbox('static/img/12.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/13.jpg" alt="Gallery Image 9" onclick="openLightbox('static/img/13.jpg')">
+            </div>
+           <div class="gallery-item">
+                <img src="static/img/14.jpg" alt="Gallery Image 10" onclick="openLightbox('static/img/14.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/15.jpg" alt="Gallery Image 11" onclick="openLightbox('static/img/15.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/16.jpg" alt="Gallery Image 12" onclick="openLightbox('static/img/16.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/17.jpg" alt="Gallery Image 13" onclick="openLightbox('static/img/17.jpg')">
+            </div>
+           <div class="gallery-item">
+                <img src="static/img/18.jpg" alt="Gallery Image 14" onclick="openLightbox('static/img/18.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/19.jpg" alt="Gallery Image 15" onclick="openLightbox('static/img/19.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/20.jpg" alt="Gallery Image 16" onclick="openLightbox('static/img/20.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/21.jpg" alt="Gallery Image 17" onclick="openLightbox('static/img/21.jpg')">
+            </div>
+
+           <div class="gallery-item">
+                <img src="static/img/22.jpg" alt="Gallery Image 18" onclick="openLightbox('static/img/22.jpg')">
+            </div>
+  
+        </div>
+
+        <a href="/" class="back-btn">Back to Home</a> <!-- Button to go back to the homepage -->
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-image" src="" alt="Enlarged Image">
+        </div>
+    </main>
+
+    <script>
+        // Function to open the lightbox
+        function openLightbox(imageSrc) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = imageSrc;
+            lightbox.style.display = 'flex'; // Show lightbox
+        }
+
+        // Function to close the lightbox
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none'; // Hide lightbox
+        }
+    </script>
+
+</body>
+
+</html>

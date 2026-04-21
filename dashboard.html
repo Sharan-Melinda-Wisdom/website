@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Campaign</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='camapignsstyles.css') }}">
+    <!-- Add Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJw3Wz2h5tL6AK8f4E5kpIHzfpeWmniEvDzUzgh5J1O6g7maYh6hx64cJkOY" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8Fq1tbO8eq7Psn3Hl+eFz9wzJ4zT5Pjj3Wyn8Z3we71vLq" crossorigin="anonymous"></script>
+    
+    <script>
+        // JavaScript for logout functionality
+        function logout() {
+            window.location.href = "http://127.0.0.1:5000/login"; // Replace with your login URL
+        }
+
+        // Close the alert message when the close button is clicked
+        function closeAlert() {
+            var alertBox = document.getElementById('successMessage');
+            alertBox.style.display = 'none';
+        }
+    </script>
+
+    <style>
+        /* Custom green background for success alert */
+        .alert-success-custom {
+            background-color: #28a745;  /* Bootstrap's success green */
+            color: white;  /* White text */
+            padding: 10px 20px; /* Reduced padding for smaller size */
+            font-size: 16px; /* Smaller text */
+            max-width: 500px; /* Set max-width for the alert box */
+            margin: 0 auto; /* Center the alert box */
+            position: relative; /* Enable absolute positioning for the close button */
+            border-radius: 5px;  /* Optional: rounded corners */
+        }
+
+        /* Container for the alert at the top, center the alert box */
+        .alert-container {
+            position: fixed;
+            top: 20px; /* Position it 20px from the top */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+        }
+
+        /* Simple X close button */
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        /* Hover effect for the close button */
+        .close-btn:hover {
+            color: #ddd; /* Change color on hover for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content" id="home">
+            <a href="#" class="nav-logo">
+                <img src="{{ url_for('static', filename='img/Logo.jpg') }}" alt="SJU Logo" class="nav-H-logo">
+                <div class="nav-logo-text">
+                    <h2 class="H-logo-text">Vibhinna</h2>
+                    <p class="H-Logo-Description">INDIA FOUNDATION</p>
+                </div>
+            </a>
+            <!-- Logout Button -->
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Flash success message container at the top of the page -->
+    {% if request.args.get('success') %}
+    <div class="alert-container">
+        <div class="alert alert-success alert-dismissible fade show text-center alert-success-custom" role="alert" id="successMessage">
+            {% if request.args.get('campaign') == 'beach_cleanup' %}
+                <strong>Success!</strong> You have successfully registered as a volunteer for the Beach Cleanup Campaign!
+            {% elif request.args.get('campaign') == 'tree_plantation' %}
+                <strong>Success!</strong> You have successfully registered as a volunteer for the Tree Plantation Campaign!
+            {% elif request.args.get('campaign') == 'food_distribution' %}
+                <strong>Success!</strong> You have successfully registered as a volunteer for the Food Distribution Campaign!
+            {% elif request.args.get('campaign') == 'education' %}
+                <strong>Success!</strong> You have successfully registered as a volunteer for the Educate the Underprivileged Campaign!
+            {% else %}
+                <strong>Success!</strong> You have successfully registered as a volunteer!
+            {% endif %}
+            <!-- Close button (simple X) -->
+            <button type="button" class="close-btn" onclick="closeAlert()">X</button>
+        </div>
+    </div>
+{% endif %}
+
+
+    <br><br><br><br>
+    <h2 class="title">Welcome to your Dashboard</h2>
+
+    <div class="overlay">
+
+        <!-- Campaign 1: Tannirbavi Beach Cleanup -->
+        <section class="campaign-section">
+            <div class="campaign-image">
+                <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Cleanup Drive 1">
+            </div>
+            <div class="campaign-text">
+                <h2>Beach Cleanup Drive</h2>
+                <p><strong>Environmental Conservation:</strong> Restoring and maintaining the natural beauty of Beaches by removing litter and debris.</p>
+                <p><strong>Community Engagement:</strong> Bringing together volunteers and community members in a collective effort for environmental stewardship.</p>
+                <h3>Objectives:</h3>
+                <ul>
+                    <li>Cleaning up Beaches by properly disposing of waste.</li>
+                    <li>Raising awareness about pollution's impact on marine life.</li>
+                    <li>Encouraging future environmental initiatives.</li>
+                </ul>
+            
+            <!-- Become a Volunteer form -->
+            <form action="/register_volunteer1" method="POST">
+                <button type="submit" class="volunteer-btn">Register as a Volunteer</button>
+            </form>
+            </div>
+        </section>
+
+        <!-- Campaign 2: Tree Plantation Drive -->
+        <section class="campaign-section">
+            <div class="campaign-image">
+                <img src="{{ url_for('static', filename='img/4.jpg') }}" alt="Tree Plantation Drive">
+            </div>
+            <div class="campaign-text">
+                <h2>Tree Plantation Drive</h2>
+                <p><strong>Reforestation Effort:</strong> Increasing green cover by planting native tree species.</p>
+                <p><strong>Climate Action:</strong> Reducing carbon footprint and promoting biodiversity.</p>
+                <h3>Objectives:</h3>
+                <ul>
+                    <li>Planting 500+ trees in urban and rural areas.</li>
+                    <li>Educating children about environmental sustainability.</li>
+                    <li>Encouraging individuals to adopt a tree and care for it.</li>
+                </ul>
+                <form action="/register_volunteer2" method="POST">
+                    <button id="myButton" button type="submit" class="volunteer-btn">Register as a Volunteer</button>
+                </form>            
+            </div>
+        </section>
+
+        <!-- Campaign 3: Food Distribution for Underprivileged -->
+        <section class="campaign-section">
+            <div class="campaign-image">
+                <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Food Distribution Event">
+            </div>
+            <div class="campaign-text">
+                <h2>Food Distribution for the Underprivileged</h2>
+                <p><strong>Hunger Relief:</strong> Providing nutritious meals to homeless and low-income families.</p>
+                <p><strong>Volunteer Participation:</strong> Engaging the community in acts of kindness and service.</p>
+                <h3>Objectives:</h3>
+                <ul>
+                    <li>Distributing meals to 300+ people weekly.</li>
+                    <li>Partnering with local businesses to reduce food waste.</li>
+                    <li>Encouraging long-term support and donation drives.</li>
+                </ul>
+                <form action="/register_volunteer3" method="POST">
+                    <button type="submit" class="volunteer-btn">Register as a Volunteer</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Campaign 4: Education Support for Underprivileged Children -->
+        <section class="campaign-section">
+            <div class="campaign-image">
+                <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Children Learning">
+            </div>
+            <div class="campaign-text">
+                <h2>Education Support for Underprivileged Children</h2>
+                <p><strong>Providing Learning Resources:</strong> Supplying books, stationery, and digital tools for children.</p>
+                <p><strong>Equal Opportunities:</strong> Supporting education for children in economically weaker sections.</p>
+                <h3>Objectives:</h3>
+                <ul>
+                    <li>Setting up free weekend tuition classes.</li>
+                    <li>Donating books and school supplies to rural schools.</li>
+                    <li>Encouraging mentorship and career guidance programs.</li>
+                </ul>
+                <form action="/register_volunteer4" method="POST">
+                    <button type="submit" class="volunteer-btn">Register as a Volunteer</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
