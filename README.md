@@ -24,14 +24,6 @@ A full-stack web application designed to manage and streamline operations for a 
 - Interactive UI with responsive design
 - Backend integration for handling requests and processing data
 
-## Project Structure
-project/
-│
-├── RunPython.py # Main backend application
-├── templates/ # HTML templates
-├── static/ # CSS, JS, and assets
-└── README.md
-
 ## Note
 - This repository contains only the core frontend and backend code.
 - Database files and sensitive configurations have been excluded for security purposes.
